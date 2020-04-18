@@ -10,10 +10,12 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
-        tags="",
-       // @dashboard or @driver"
-        plugin="html:target/cucumber-html-report"
-        //tags="@sales_manager and @driver" if have both tags
+        tags = "@create_calendar_event_2",
+        plugin = {
+                "html:target/default-report",
+                "json:target/cucumber.json"
+        }
+
 )
 public class CucumberRunner {
 
