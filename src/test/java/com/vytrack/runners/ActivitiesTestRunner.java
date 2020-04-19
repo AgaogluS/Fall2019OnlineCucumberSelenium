@@ -7,17 +7,16 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = "com/vytrack/step_definitions",
-        features = "src/test/resources/features",
-        dryRun = true,
+        features = "src/test/resources/features/activities",
+        dryRun = false,
         strict = false,
-        tags = "@create_car",
+        tags = "A",
         plugin = {
                 "html:target/default-report",
-                "json:target/cucumber1.json"
+                "json:target/cucumber2.json"
         }
 
 )
-public class CucumberRunner {
-
+public class ActivitiesTestRunner {
 
 }
