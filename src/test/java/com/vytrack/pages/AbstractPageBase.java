@@ -66,7 +66,11 @@ public abstract class AbstractPageBase {
                 click(moduleElement).
                 build().perform();
 
-        //increase this wait rime if still failing
+        //increase this wait time if still failing
         BrowserUtilities.wait(4);
+        waitForLoaderMask();
+    }
+    public void waitForLoaderMask(){
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("[class*='loader-mask']")));
     }
 }
